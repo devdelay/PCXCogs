@@ -271,7 +271,7 @@ class AutoRoom(Commands, commands.Cog, metaclass=CompositeMetaClass):
                         if avc_settings["channel_name_type"] == "game":
                             for activity in member.activities:
                                 if activity.type.value == 0:
-                                    new_channel_name = "🎮 " activity.name
+                                    new_channel_name = f"🎮 {activity.name}"
                                     break
                     if not new_channel_name:
                         new_channel_name = f"{member.display_name}'s 🎮 Lounge"
